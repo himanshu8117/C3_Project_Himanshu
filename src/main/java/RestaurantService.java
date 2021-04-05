@@ -36,5 +36,16 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+    public int getTotalCostOfSelectedItems(List<Item> items){
+        int totalCost = 0;
+        //Iterate item list to get total cost
+        if (items.size() > 0){
+            for (Item i: items){
+                totalCost += i.getPrice();
+            }
+        }
+        return totalCost;
+    }
+
 }
 
