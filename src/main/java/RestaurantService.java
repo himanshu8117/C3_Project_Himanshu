@@ -7,11 +7,11 @@ import java.util.ServiceConfigurationError;
 public class RestaurantService {
     private static List<Restaurant> restaurants = new ArrayList<>();
 
-    public Restaurant findRestaurantByName(String restaurantName) throws  restaurantNotFoundException{
+    public Restaurant findRestaurantByName(String restaurantName) throws restaurantNotFoundException {
 
         // Iterate through Restaurant list and check if provided restaurant is available
         // if found in the list return the Restaurant object
-        for (Restaurant r: restaurants){
+        for (Restaurant r : restaurants) {
             if (r.getName().contains(restaurantName)) {
                 Restaurant searchRestaurant = r;
                 return searchRestaurant;
@@ -37,3 +37,4 @@ public class RestaurantService {
         return restaurants;
     }
 }
+
